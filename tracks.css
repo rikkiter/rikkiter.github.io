@@ -1,0 +1,141 @@
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background-image: url('background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+#logo {
+    margin-top: 20px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 5%;
+}
+
+.nav-links a {
+    font-size: clamp(18px, 4vw, 36px);
+    white-space: nowrap;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+
+
+.tracks-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.track-header, .track {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr auto;
+    align-items: center;
+    padding: 15px 0;
+    gap: 15px;
+}
+
+.track-header {
+    font-size: clamp(16px, 3vw, 26px);
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.track {
+    font-size: clamp(14px, 2.5vw, 22px);
+    border-bottom: 1px solid #444;
+}
+
+.buy-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    font-size: clamp(14px, 2.5vw, 22px);
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.buy-btn:hover {
+    background-color: #1db954;
+    border-color: #1db954;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 10px;
+        padding: 10px 5%;
+    }
+    
+    .track-header, .track {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "date city"
+            "place time"
+            "button button";
+        gap: 10px;
+        padding: 10px 0;
+    }
+    
+    .track-header div:nth-child(1),
+    .track div:nth-child(1) {
+        grid-area: date;
+    }
+    
+    .track-header div:nth-child(2),
+    .track-item div:nth-child(2) {
+        grid-area: city;
+    }
+    
+    .track-header div:nth-child(3),
+    .track div:nth-child(3) {
+        grid-area: place;
+    }
+    
+    .track-header div:nth-child(4),
+    .track div:nth-child(4) {
+        grid-area: time;
+    }
+    
+    .buy-btn {
+        grid-area: button;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+}

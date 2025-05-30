@@ -1,146 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logan Music</title>
-    <div class="concert-banner"></div>
-
-    <style>
-        body {
-            font-family: Courier New, Regular;
-            margin: 0; 
-            padding: 0;
-            background-color: #000000;
-            background-image: url('background.png');
-            background-attachment: fixed;
-        }
-            
-        a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        a:hover {
-            opacity: 0.8;
-        }
-
-        .nav-links {
-            display: flex;
-            flex-direction: row;
-            gap: 100px;
-            padding: 15px 320px;
-            text-align: center;
-        }
-
-        .nav-links a {
-            font-size: 36px;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .pictures {
-            padding: 0px 50px;
-        }
-
-        .button {
-            padding: 10px 0;
-        }
-
-        .concert-header {
-            display: grid;
-            grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
-            padding: 20px 150px;
-            font-size: 26px;
-            color: white;
-            border-bottom: 2px solid #333;
-            margin-bottom: 10px;
-        }
-        
-        .concert-item {
-            display: grid;
-            grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
-            font-size: 26px;
-            color: white;
-            align-items: center;
-            padding: 15px 150px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .buy-btn {
-            background-color: #00000000;
-            color: white;
-
-            font-family: Courier New, Regular;
-            font-size: 26px;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="nav-links">
-        <a href="/tracks" class="button">треки</a>
+    <nav class="nav-links" id="home">
+        <a href="tracks.html" class="button">треки</a>
         <a href="#concerts" class="button">концерты</a>
-        <a href="#home" class="logo">
-            <img src="music.png" alt="LOGAN MUSIC">
+        <a href="#home" class="logo" id="logo">
+            <img src="music.png" alt="LOGAN MUSIC" class="logo-img">
         </a>
-        
-        <a href="/shop" class="button">магазин</a>
-        <a href="/contacts" class="button">контакты</a>
+        <a href="shop.html" class="button">магазин</a>
+        <a href="contacts.html" class="button">контакты</a>
+    </nav>
+
+    <div class="hero-image">
+        <img src="picture.png" alt="Концерт" class="hero-img">
     </div>
 
-    <div class="pictures">
-        <img src="picture.png" alt="Концерт">
+    <div class="concerts-container">
+        <div class="concert-header" id="concerts">
+            <div>дата</div>
+            <div>город</div>
+            <div>место</div>
+            <div>время</div>
+            <div></div>
+        </div>
 
-    </div>
-
-    <div class="concert-header" id="concerts">
-        <div>дата</div>
-        <div>город</div>
-        <div>место</div>
-        <div>время</div>
-    </div>
-
-    <div class="concerts-list">
-        <div class="concert-item">
-            <div>1 июня</div>
-            <div>Архангельск</div>
-            <div>Клуб М33</div>
-            <div>19:00</div>
-            <button class="buy-btn">Купить билет</button>
+        <div class="concerts-list">
+            <div class="concert-item">
+                <div>1 июня</div>
+                <div>Архангельск</div>
+                <div>Клуб М33</div>
+                <div>19:00</div>
+                <button class="buy-btn">Купить билет</button>
+            </div>
         </div>
-        <div class="concert-item">
-            <div>2 июня</div>
-            <div>Северодвинск</div>
-            <div>ДК</div>
-            <div>21:00</div>
-            <button class="buy-btn">Купить билет</button>
-        </div>
-        <div class="concert-item">
-            <div>3 июня</div>
-            <div>Новодвинск</div>
-            <div>Клуб Владос</div>
-            <div>19:00</div>
-            <button class="buy-btn">Купить билет</button>
-        </div>
-        <div class="concert-item">
-            <div>4 июня</div>
-            <div>Сульфат</div>
-            <div>КЦ "Северный"</div>
-            <div>17:00</div>
-            <button class="buy-btn">Купить билет</button>
-        </div>
-        <div class="concert-item">
-            <div>5 июня</div>
-            <div>Авдеевка</div>
-            <div>Окоп</div>
-            <div>19:00</div>
-            <button class="buy-btn">Купить билет</button>
-        </div>
-            
     </div>
 </body>
 </html>
